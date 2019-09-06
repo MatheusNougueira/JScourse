@@ -9,32 +9,31 @@ titulo2.textContent = "OIIII";
 
 //adicionamento o valor selecionado (document vai selecionar o elemento que possui o "id") à var paciente
 var paciente = document.querySelector("#primeiro-paciente");
-var tdPeso = paciente.querySelector(".info-peso")
+var tdPeso = paciente.querySelector(".info-peso");
+
 var peso = tdPeso.textContent;
 var tdAltura = paciente.querySelector(".info-altura");
+
 var altura = tdAltura.textContent;
+
+var tdImc = document.querySelector(".info-imc");
 var pesoEhValido = true;
 var alturaEhValida = true;
 
-if (peso < 0 || peso > 1000) {
-    console.log("Peso inválido")
+
+if (peso <= 0 || peso >= 1000) {
+    console.log("Peso inválido");
     pesoEhValido = false;
-}
-if (altura < 0 || altura > 3.00) {
-    console.log("Altura inválida")
-    alturaEhValida = false;
+    tdImc.textContent = "Peso inválido";
 }
 
-console.log(paciente);
-console.log(tdPeso);
-console.log(peso);
-console.log(tdAltura);
-console.log(altura);
+if (altura <= 0 || altura >= 3.00) {
+    console.log("Altura inválida");
+    var alturaEhValida = false;
+    tdImc.textContent = "Altura inválida";
+}
 
-var tdImc = document.querySelector(".info-imc");
-
-var imc = peso / (altura * altura); //divide o peso pelo resultado da multiplicação
-
-tdImc.textContent = imc;
-
-console.log(imc);
+if (alturaEhValida && pesoEhValido) {
+    var imc = peso / (altura * altura);
+    tdImc.textContent = imc;
+}
