@@ -145,3 +145,18 @@ button:hover{
 .paciente-valido{
 	color: green;
 }
+
+.testes{
+	width: 60%;
+	height: 100%;
+	margin: 0 auto;
+	border-style: none;
+}
+
+.titulo2{
+	font-size: 3em;
+	display: block;
+	padding-bottom: .5em;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: .5em;
+}
