@@ -1,5 +1,8 @@
 var titulo = document.querySelector(".titulo");
-titulo.textContent = "Aparecida Nutricionista";
+titulo.textContent = "ESTER NUTRIÇÃO";
+
+var titulo2 = document.querySelector(".titulo2");
+titulo2.textContent = "Pacientes"
 
 var pacientes = document.querySelectorAll(".paciente");
 

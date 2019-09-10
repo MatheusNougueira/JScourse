@@ -161,6 +161,21 @@ button:hover{
 	margin-bottom: .5em;
 }
 
-#mensagens-erro{
+#mensagens-erro, span{
 	color: red;
+}
+
+.fadeOut{
+	opacity: 0;
+	transition: 0.5s;
+}
+
+#filtrar-tabela{
+	width: 300px;
+	height: 35px;
+	margin-bottom: 10px; 
+}
+
+.invisivel{
+	display: none;
 }
